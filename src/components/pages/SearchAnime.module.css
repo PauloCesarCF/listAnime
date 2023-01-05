@@ -1,0 +1,135 @@
+.containerLoading {
+  height: 69vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+.loader {
+  --clr: #3498db;
+  /* color of spining  */
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: var(--clr);
+}
+
+.loader:before {
+  z-index: 100;
+  animation: spin 1s infinite;
+}
+
+.loader:after {
+  border: 10px solid #ccc;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+div h1{
+  color: black;
+}
+
+@media (min-width: 200px) {
+
+  .result{
+    font-size: 18px;
+  }
+
+  .containerAnimesAndMangas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    width: 95%;
+    margin: 5px;
+  }
+}
+.containerAnimeOrManga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px 5px 5px 0px;
+  border: 1px solid #3A4A59;
+  border-radius: 5px;
+  background-color: #E5EBF1
+}
+
+.CanonicalTitle {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.episodesLength {
+  color: black;
+}
+
+.episodesLengthNotContent {
+  color: black;
+  font-size: 13px;
+}
+
+@media (min-width: 320px) {
+  .containerAnimesAndMangas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+@media (min-width: 425px) {
+
+  .result{
+    font-size: 25px
+  }
+  .containerAnimesAndMangas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) {
+  .containerAnimesAndMangas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    width: 95%;
+  }
+}
+
+
+@media (min-width: 1024px){
+  .result{
+    font-size: 35px
+  }
+}

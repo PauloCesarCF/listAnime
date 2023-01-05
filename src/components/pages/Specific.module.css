@@ -1,0 +1,155 @@
+.containerLoading {
+  height: 88vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+.loader {
+  --clr: #3498db;
+  /* color of spining  */
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: var(--clr);
+}
+
+.loader:before {
+  z-index: 100;
+  animation: spin 1s infinite;
+}
+
+.loader:after {
+  border: 10px solid #ccc;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.Title {
+  margin-bottom: 20px;
+}
+
+.Streaming {
+  margin: 20px 10px;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+@media (min-width: 200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    background: #CED3D9;
+    color: black;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .Top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 8px;
+  }
+
+  .Title {
+    margin: 10px 0px;
+  }
+
+  .description,
+  .synopsi {
+    margin-top: 10px;
+  }
+
+  .video {
+    position: relative;
+    width: 90%;
+    height: 50vh;
+  }
+
+  .video>iframe {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .Top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .content {
+    width: 62%;
+  }
+
+  .platform {
+    margin: 10px 0px;
+  }
+
+  .video {
+    position: relative;
+    width: 90%;
+    height: 90vh;
+  }
+
+  .video>iframe {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .video {
+    position: relative;
+    width: 90%;
+    height: 90vh;
+  }
+
+  .video>iframe {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 90%;
+    height: 90%;
+  }
+}

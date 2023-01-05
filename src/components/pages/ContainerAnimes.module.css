@@ -1,0 +1,81 @@
+@media (min-width: 320px){
+  .dad{
+    width: 88vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+  .title{
+    font-size: 35px;
+    width: 100vw
+  }
+
+  .containerArcodeon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 92%;
+  }
+  
+  .containerAnimeOrManga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 5px 5px 0px;
+    border: 1px solid #3A4A59;
+    border-radius: 5px;
+    background-color: #E5EBF1
+  }
+  
+  .CanonicalTitle {
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .episodesLength {
+    color: black;
+  }
+  
+  .episodesLengthNotContent{
+    color: black;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 425px) {
+  .containerArcodeon {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 580px){
+  .containerArcodeon {
+      width: 97%
+    }
+}
+
+@media (min-width: 700px){
+  .containerArcodeon {
+      width: 98%
+    }
+}
+
+@media (min-width: 768px){
+  .title {
+      font-size: 35px;
+      width: 100vw
+    }
+    
+  .containerArcodeon {
+      grid-template-columns: 1fr  1fr 1fr 1fr;
+      width: 100%
+  }
+}
+
+@media (min-width: 1440px){
+  .containerArcodeon {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
