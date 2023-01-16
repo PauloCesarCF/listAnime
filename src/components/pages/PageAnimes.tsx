@@ -4,13 +4,21 @@ import {Link} from 'react-router-dom';
 import styles from './Page.module.css';
 
 type AnimesAPI = {
-  length: Number
+  length: Number,
   map: any
 }
 
+type Images = {
+  small: string
+}
+
+type attributesApi = {
+  canonicalTitle: string,
+  posterImage: Images
+}
+
 type itens = {
-  "attributes.posterImage.small": any
-  'attributes.canonicalTitle': any
+  attributes: attributesApi
   id: Number
 }
 
@@ -42,8 +50,8 @@ const PageAnimes = () => {
       <div className="containerAnimesAndMangas">
         {AllAnimes.length > 0 && AllAnimes.map((item: itens, key: undefined) => (
           <div key={key} className="containerAnimeOrManga">
-            <img src={item['attributes.posterImage.small']} alt={item['attributes.canonicalTitle']} className="AnimeOrManga" />
-            <p className="CanonicalTitle">{item['attributes.canonicalTitle']}</p>
+            <img src={item.attributes.posterImage.small} alt={item.attributes.canonicalTitle} className="AnimeOrManga" />
+            <p className="CanonicalTitle">{item.attributes.canonicalTitle}</p>
             <Link className="more" to={`/Anime?q=${item.id}`}>Ver detalhes</Link>
           </div>
         ))}

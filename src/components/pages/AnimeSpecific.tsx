@@ -1,7 +1,5 @@
 import styles from './Specific.module.css';
-
 import {useSearchParams} from 'react-router-dom';
-
 import {useState, useEffect} from 'react';
 
 type Anime = {
@@ -11,7 +9,7 @@ type Anime = {
 }
 
 type AnimeImage = {
-  small: any
+  small: string
 }
 
 const AnimeSpecific = () => {
@@ -24,7 +22,7 @@ const AnimeSpecific = () => {
   const [AnimeImage, setAnimeImage] = useState<AnimeImage>();
   const [youtubeVideoId, setYoutubeVideoId] = useState("");
 
-  const searchAnime = async (anime: any) => {
+  const searchAnime = async (anime: string) => {
     const res = await fetch(anime);
     const json = await res.json();
 

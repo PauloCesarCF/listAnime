@@ -4,11 +4,18 @@ import {Link} from 'react-router-dom'
 import styles from './ContainerAnimes.module.css'
 import Animes from '../API/TopAnimes';
 
+type responseAPI = {
+  data: Array<attributes>
+}
+
 type itens = {
+  items: responseAPI;
+}
+
+type attributes = {
   attributes: datas;
   canonicalTitle: String;
   id: Number;
-  items: any;
 }
 
 type datas = {
@@ -47,7 +54,7 @@ const ContainerTopAnimes = () => {
       <h1 className={styles.title}>Animes em alta</h1>
       {trendingAnimes.map((item: itens, key) => (
         <div className={styles.containerArcodeon} key={key}>
-          {item.items.data.map((items: itens, key: any) => (
+          {item.items.data.map((items: attributes, key: any) => (
             <Link onClick={toTop} className={styles.containerAnimeOrManga} key={key} to={`/Anime?q=${items.id}`}>
               <img src={items.attributes.posterImage.small}/>
               <p className={styles.CanonicalTitle}>{items.attributes.canonicalTitle}</p>

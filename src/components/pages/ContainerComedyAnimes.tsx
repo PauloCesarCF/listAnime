@@ -4,16 +4,23 @@ import {Link} from 'react-router-dom'
 import styles from './ContainerAnimes.module.css'
 import ComedyAnime from '../API/ComedyAnimes';
 
+type responseAPI = {
+  data: Array<attributes>
+}
+
 type itens = {
+  items: responseAPI;
+}
+
+type attributes = {
   attributes: datas;
   canonicalTitle: String;
   id: Number;
-  items: any;
 }
 
 type datas = {
   canonicalTitle: String;
-  episodeCount: any;
+  episodeCount: number;
   posterImage: Images
 }
 
@@ -48,7 +55,7 @@ const ContainerComedyAnimes = () => {
       <h1 className={styles.title}>Animes de comédia</h1>
       {getComedyAnime.map((items: itens, key) => (
         <div className={styles.containerArcodeon} ref={carousel} key={key}>
-          {items.items.data.map((items: itens, key: any) => (
+          {items.items.data.map((items: attributes, key: any) => (
             <Link onClick={toTop} className={styles.containerAnimeOrManga} key={key} to={`/Anime?q=${items.id}`}>
               <img src={items.attributes.posterImage.small}/>
               <p className={styles.CanonicalTitle}>{items.attributes.canonicalTitle}</p>
