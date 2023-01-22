@@ -1,0 +1,48 @@
+
+@media (min-width: 200px) {
+.video {
+  position: relative;
+  width: 90%;
+  height: 50vh;
+}
+
+.video>iframe {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  width: 90%;
+  height: 90%;
+}
+}
+
+@media (min-width: 768px) {
+  .video {
+    position: relative;
+    width: 90%;
+    height: 90vh;
+  }
+
+  .video>iframe {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .video {
+    position: relative;
+    width: 90%;
+    height: 90vh;
+  }
+
+  .video>iframe {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 90%;
+    height: 90%;
+  }
+}

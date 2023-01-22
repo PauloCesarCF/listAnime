@@ -1,11 +1,12 @@
 import styles from './Specific.module.css';
 import {useSearchParams} from 'react-router-dom';
 import {useState, useEffect} from 'react';
+import ContentAnime from '../layout/ContentAnime';
 
 type Anime = {
-  canonicalTitle: String
-  description: String
-  length: Number
+  canonicalTitle: string
+  description: string
+  length: any
 }
 
 type AnimeImage = {
@@ -16,10 +17,10 @@ const AnimeSpecific = () => {
   
   //get Id for Anime or mangá
   const [searchParams] = useSearchParams();
-  let query = searchParams.get("q")
+  let query = searchParams.get("q");
 
-  const [anime, setAnime] = useState<Anime>();
-  const [AnimeImage, setAnimeImage] = useState<AnimeImage>();
+  const [anime, setAnime] = useState<Anime>({canonicalTitle: '', description: '', length: '' });
+  const [AnimeImage, setAnimeImage] = useState<AnimeImage>({small: ''});
   const [youtubeVideoId, setYoutubeVideoId] = useState("");
 
   const searchAnime = async (anime: string) => {
@@ -47,16 +48,7 @@ const AnimeSpecific = () => {
         </div>
       ) : (
       <div className={styles.ContainerAnime}>
-        <div className={styles.Top}>
-          <img src={AnimeImage?.small} />
-          <div className={styles.content}>
-            <h1 className={styles.Title}>{anime?.canonicalTitle}</h1>
-            <p className={styles.description}>Synopsi: {anime?.description}</p>
-          </div>
-        </div>
-        <div className={styles.video}>
-          <iframe width="560" height="315" src={`https://www.youtube.com/embed/${youtubeVideoId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-        </div>
+        <ContentAnime title={anime?.canonicalTitle} description={anime?.description} Image={AnimeImage?.small} youtubeVideoId={youtubeVideoId}/>
       </div>
         )
       }

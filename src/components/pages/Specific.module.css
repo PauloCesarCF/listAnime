@@ -53,18 +53,6 @@
   }
 }
 
-.Title {
-  margin-bottom: 20px;
-}
-
-.Streaming {
-  margin: 20px 10px;
-}
-
-.description {
-  margin-top: 20px;
-}
-
 @media (min-width: 200px) {
   .container {
     display: flex;
@@ -74,82 +62,11 @@
     text-align: center;
     width: 100vw;
   }
-
-  .Top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    padding: 8px;
-  }
-
-  .Title {
-    margin: 10px 0px;
-  }
-
-  .description,
-  .synopsi {
-    margin-top: 10px;
-  }
-
-  .video {
-    position: relative;
-    width: 90%;
-    height: 50vh;
-  }
-
-  .video>iframe {
-    position: absolute;
-    top: 5%;
-    right: 1%;
-    width: 90%;
-    height: 90%;
-  }
 }
 
 @media (min-width: 768px) {
-  .Top {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-  }
-
   .content {
     width: 62%;
   }
 
-  .platform {
-    margin: 10px 0px;
-  }
-
-  .video {
-    position: relative;
-    width: 90%;
-    height: 90vh;
-  }
-
-  .video>iframe {
-    position: absolute;
-    top: 5%;
-    right: 1%;
-    width: 90%;
-    height: 90%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .video {
-    position: relative;
-    width: 90%;
-    height: 90vh;
-  }
-
-  .video>iframe {
-    position: absolute;
-    top: 5%;
-    right: 1%;
-    width: 90%;
-    height: 90%;
-  }
 }
